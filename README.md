@@ -1,2 +1,2 @@
-# obstacle-avoider
-use HC-SR04 ultrasonic sensor to make a robotic car avoid obstacles and adjust distances when negotiating corners 
+## obstacle-avoider
+This is a simple attempt at achieving intelligent obstacle avoidance for a small RC car. 
