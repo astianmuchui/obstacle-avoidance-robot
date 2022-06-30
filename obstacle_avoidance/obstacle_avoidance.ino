@@ -1,8 +1,9 @@
 #include <NewPing.h>
 // Bluetooth module to control the car using a phone
-#include <DabbleESP32.h>
 #define CUSTOM_SETTINGS
 #define INCLUDE_GAMEPAD_MODULE
+#include <DabbleESP32.h>
+
 #define PWM1_Ch1    0    
 #define PWM1_Ch2    1
 #define PWM1_Res   8      
@@ -27,7 +28,7 @@ int ultrasonic_distance = sonar.ping_cm();
 
 void setup() {
   // put your setup code here, to run once:
-  serial.begin(9600);
+  Serial.begin(9600);
   Dabble.begin("Device_name");
   delay(50);
   pinMode(EN1, OUTPUT);  
@@ -49,7 +50,7 @@ void loop() {
   Serial.println(sonar.ping_cm());
   delay(500);
   Dabble.processInput();
-  if (Gamepad.isUpPressed())
+  if (GamePad.isUpPressed())
   {
     // Move robot forwards considering the ultrasonic distance
     if(ultrasonic_distance >limit)
@@ -69,7 +70,7 @@ void loop() {
         Brake();
         }
     }
-    if (Gamepad.isDownPressed())
+    if (GamePad.isDownPressed())
     {
       if (ultrasonic_distance > limit)
       {
@@ -82,7 +83,7 @@ void loop() {
           }
 
       }
-      if (Gamepad.isLeftPressed())
+      if (GamePad.isLeftPressed())
       {
         if (ultrasonic_distance >limit)
         {
@@ -103,7 +104,7 @@ void loop() {
             }
           
         }
-        if (Gamepad.isRightPressed())
+        if (GamePad.isRightPressed())
         {
           if (ultrasonic_distance > limit)
           {
