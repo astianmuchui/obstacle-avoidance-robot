@@ -17,7 +17,7 @@ const int IN1B = 5;
 const int EN2 = 4;        
 const int IN2A = 6;
 const int IN2B = 10;
-
+// Arr
 int pins[6] = {2,3,5,4,6,10};
 
 const int echo_sensor_pin = 11; 
