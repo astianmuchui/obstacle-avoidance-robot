@@ -1,7 +1,7 @@
 # Basic Obstacle Avoidance Using Ultrasonic sensors 
 
 ## Introduction 
-A project was proposed to make an Robocar that should detect obstacles and avoid them using arduino uno.
+A project was proposed to make a Robocar that should detect obstacles and avoid them using arduino uno.
 
 ## Solution 
 Make the default motion to forward motion while the desired distance limit has not been reached, <br>
